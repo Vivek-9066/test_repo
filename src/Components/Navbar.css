@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+}
+body{
+    background: url('./Assets/bg.jpg') no-repeat;
+    
+}
+nav{
+    height: 80px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 80px;
+    backdrop-filter: blur(30px);
+}
+nav .logo{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+}
+nav .logo b{
+    color: #a12d3c;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;  
+}
+nav ul li{
+    margin: 15px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    align-items: center;
+}
+nav ul li a:hover{
+    background-color: #a12d3c;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+nav .button{
+    color: #000;
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+    border: none;
+    
+}
+nav .button a:hover{
+    background-color: #a12d3c;
+    transition: 0.3s ease;
+}
+nav .button a{
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+}
+nav .menubar i{
+    color: #fff;
+font-size: 22px;
+    display: none;
+    cursor: pointer;
+}
+#click{
+    display: none;
+}
+@media (max-width: 940px){
+    nav .menubar i{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+    }
+    #click:checked ~ .menu-bar i::before{
+        content: "\f00d";
+    }
+   nav ul{
+    display: block;
+    top: 80px;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    left: -100%;
+    transition: 0.3s ease;
+   }
+   nav ul li{
+    margin: 10px 0px;
+   }
+   #click:checked ~ ul{
+    left: 0;
+}
+   nav ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+   }
+   nav ul li:hover{
+    background-color: #a12d3c;
+   }
+   nav .button{
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 12px;
+   }
+   nav .button a:hover{
+    background: #a12d3c;
+    transition: 0.3s ease;
+   }
+}

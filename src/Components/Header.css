@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: #fff;
+}
+nav{
+    background: #000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 80px;
+}
+nav .logo{
+    font-size: 25px;
+    color: #fff;
+}
+nav b{
+    color: aqua;
+}
+nav ul{
+display: flex;
+list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+    padding: 10px 12px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+nav ul li a:hover{
+    background-color: aqua;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+/* extra  */
+nav .button{
+    color: rgb(7, 0, 0);
+    background-color:aqua;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+nav .button:hover{
+    background-color: rgb(10, 118, 118);
+    transition: 0.3s ease;
+}
+nav .menu-bar i{
+color: #fff;
+font-size: 22px;
+cursor: pointer;
+display: none;
+}
+#click{
+    display: none;
+}
+/* media query */
+@media (max-width: 940px){
+    nav .menu-bar i{
+        display: block;
+    }
+    #click:checked ~ .menu-bar i::before{
+        content: "\f00d";
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100% ;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: 0.5s ease;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    nav ul .button{
+         margin-top: 20px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+        font-weight: 600;
+    }
+}
